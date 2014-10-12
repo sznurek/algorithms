@@ -80,7 +80,7 @@ int main() {
         for(int j = 0; j < patterns[i].size(); j++) {
             pattern_hashes[i] = BASE * pattern_hashes[i] + patterns[i][j];
         }
-        cout << "pattern " << i << " hash " << pattern_hashes[i] << endl;
+        //cout << "pattern " << i << " hash " << pattern_hashes[i] << endl;
     }
 
     map<ui, long long int> was;
@@ -106,9 +106,9 @@ int main() {
                 make_pair(pattern_hash, (unsigned int)0));
 
         while(start != text_hashes.end() && start->first == pattern_hash) {
-            cout << "YEAH!\n";
+            //cout << "YEAH!\n";
             if(realcmp(start->second)) {
-                cout << "GREAT!\n";
+                //cout << "GREAT!\n";
                 local_res++;
             }
 

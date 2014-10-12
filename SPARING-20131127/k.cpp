@@ -29,9 +29,11 @@ int main() {
     ll M = fm / g;
     ll F = mf / g;
 
+    ll cliques = 1;
     while(M < max(mm + 1, fm) || F < max(ff + 1, mf)) {
         M *= 2;
         F *= 2;
+        cliques *= 2;
     }
 
     cout << F << " " << M << endl;
@@ -41,8 +43,11 @@ int main() {
         }
     }
 
-    for(int i = 1; i <= M; i++) {
-        
+    for(int i = 0; i < cliques; i++) {
+        ll clique_start = 1 + i * (M/cliques);
+        for(int j = 0; j < M/cliques; j++) {
+            
+        }
     }
 
     return 0;
